@@ -69,6 +69,7 @@ class _SearchPageState extends State<SearchPage> {
   }
 
   void _onCitySelected(String city) async {
+    log('Добавлена кнопка');
     FocusScope.of(context).unfocus();
     final query = _searchController.text;
     final coord = await dataSource.getCityCoordinates(query);
